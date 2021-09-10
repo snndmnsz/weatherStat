@@ -122,7 +122,7 @@ button.addEventListener("click", function () {
 const getDataFindLocation = async function (lat, long) {
   
   const data = await fetch(
-    ` https://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`
+    `https://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`
   );
 
   if (data.status === 400) {
