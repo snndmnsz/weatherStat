@@ -29,6 +29,9 @@ const hide_main = document.querySelector(".main");
 const hide_1 = document.querySelector(".page-1");
 const hide_2 = document.querySelector(".page-2");
 
+const loader = document.querySelector(".loader");
+loader.style.display = "none";
+
 hide_main.style.display = "none";
 hide_1.style.display = "none";
 hide_2.style.display = "none";
@@ -90,7 +93,6 @@ const button = document.querySelector(".find-location");
 // let latText = document.getElementById("latitude");
 // let longText = document.getElementById("longitude");
 
-
 button.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(function (position) {
     let lat = position.coords.latitude;
@@ -99,14 +101,19 @@ button.addEventListener("click", function () {
     //console.log(lat.toFixed(2));
     //console.log(long.toFixed(2));
 
-    getDataFindLocation(lat, long);
+    loader.style.display = "inline";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      getDataFindLocation(lat, long);
+    }, 1000);
+    hide_main.style.display = "none";
+    hide_1.style.display = "none";
+    hide_2.style.display = "none";
   });
 });
 
-
-
 const getDataFindLocation = async function (lat, long) {
-
   const data = await fetch(
     ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`
   );
@@ -147,27 +154,27 @@ const getDataFindLocation = async function (lat, long) {
   hide_main.style.display = "flex";
   hide_1.style.display = "flex";
   hide_2.style.display = "flex";
-  
 };
 
-
-
-
-
-
-
 const input = document.querySelector("#input");
-
 
 input.addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
-    getDataFromInput(input.value);
-    input.value = "";
+    loader.style.display = "inline";
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      getDataFromInput(input.value);
+      input.value = "";
+
+      loader.style.display = "none";
+    }, 1000);
+    hide_main.style.display = "none";
+    hide_1.style.display = "none";
+    hide_2.style.display = "none";
   }
-});;
-
-
+});
 
 const getDataFromInput = async function (input) {
   const data = await fetch(
@@ -211,7 +218,6 @@ const getDataFromInput = async function (input) {
   hide_1.style.display = "flex";
   hide_2.style.display = "flex";
 };
-
 
 const getFlag = async function (name) {
   const data = await fetch(` https://restcountries.eu/rest/v2/name/${name}`);
