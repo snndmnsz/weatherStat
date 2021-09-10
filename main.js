@@ -183,17 +183,18 @@ const input = document.querySelector("#input");
 input.addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
-    input.inputmode = "text";
+    
     error.style.display = "none";
     loader.style.display = "inline";
 
     setTimeout(() => {
       loader.style.display = "none";
       getDataFromInput(input.value);
-      //input.value = "";
-
+      input.value = "";
+      input.inputmode = "text";
       loader.style.display = "none";
     }, 1000);
+
     hide_main.style.display = "none";
     hide_1.style.display = "none";
     hide_2.style.display = "none";
