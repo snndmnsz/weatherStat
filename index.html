@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
+    <script src="main.js"></script>
+    <title>weatherStats</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo flex">
+        <p>WeatherStat</p>
+        <i class="ri-moon-cloudy-line"></i>
+      </div>
+      <div class="right">
+        <div class="source-code button">
+          <i class="ri-github-line"></i>
+          <p>source code</p>
+        </div>
+        <div class="lang">
+          <i
+            class="em em-flag-tr"
+            aria-role="presentation"
+            aria-label="Turkey Flag"
+          ></i>
+          <i
+            class="em em-flag-um"
+            aria-role="presentation"
+            aria-label="U.S. Outlying Islands Flag"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="search-text">
+        <p>Find weather conditions in anywhere</p>
+      </div>
+      <div class="search">
+        
+        <div class="city-search">
+          <div class="search-icon flex">
+            <i class="ri-search-line"></i>
+          </div>
+          <div class="search-input flex">
+            <input type="text" placeholder="write a city name and hit enter...." />
+          </div>
+        </div>
+        <div class="find-location flex button">
+          <i class="ri-map-pin-fill"></i>
+          <p>find my location</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat main">
+          <div class="icon">
+            <img src="116.png" alt="" />
+          </div>
+          <div class="condition">Partly cloudy</div>
+          <div class="temp-c-main flex">
+            <div class="temp-c">19.0</div>
+            <i class="ri-celsius-line"></i>
+          </div>
+          <div class="temp-f-main flex">
+            <div class="temp-f">66.2</div>
+            <i class="ri-fahrenheit-line"></i>
+          </div>
+          <div class="name">London</div>
+          <div class="country-flag flex">
+            <i
+              class="em em-gb"
+              aria-role="presentation"
+              aria-label="United Kingdom Flag"
+            ></i>
+            <div class="country">United Kingdom</div>
+          </div>
+          <div class="last-updated flex">
+            <p>last updated</p>
+            <div class="update-date">2021-09-09 23:02</div>
+          </div>
+        </div>
+
+        <div class="stat page-1">
+          <div class="sp wind-mhp">
+            <div class="name flex">
+              <i class="ri-windy-line"></i>
+              <p>wind /mph</p>
+            </div>
+            <div class="v wind-mhp-val">5.6</div>
+          </div>
+
+          <div class="sp wind-kph">
+            <div class="name flex">
+              <i class="ri-windy-line"></i>
+              <p>wind /kph</p>
+            </div>
+            <div class="v wind-kph-val">9.0</div>
+          </div>
+
+          <div class="sp wind-degree">
+            <div class="name flex">
+              <i class="ri-windy-line"></i>
+              <p>wind /c°</p>
+            </div>
+            <div class="v wind-degree-val">210</div>
+          </div>
+
+          <div class="sp wind-dir">
+            <div class="name flex">
+              <i class="ri-windy-line"></i>
+              <p>wind dir.</p>
+            </div>
+            <div class="v wind-dir-val">SSW</div>
+          </div>
+          <div class="sp humidity">
+            <div class="name flex">
+              <i class="ri-contrast-drop-2-line"></i>
+              <p>humidity</p>
+            </div>
+            <div class="v humidity-val">78</div>
+          </div>
+
+          <div class="sp clouds">
+            <div class="name flex">
+              <i class="ri-cloud-line"></i>
+              <p>cloud</p>
+            </div>
+
+            <div class="v cloud-val">0</div>
+          </div>
+
+          <div class="sp feelslike-c">
+            <div class="name flex">
+              <i class="ri-temp-cold-line"></i>
+              <p>feelslike /c°</p>
+            </div>
+
+            <div class="v feelslike-c-val">19.0</div>
+          </div>
+
+          <div class="sp feelslike-f">
+            <div class="name flex">
+              <i class="ri-temp-cold-line"></i>
+              <p>feelslike /f</p>
+            </div>
+
+            <div class="v feelslike-f-val">66.2</div>
+          </div>
+        </div>
+
+        <div class="stat page-2">
+          <div class="sp pressure-mb">
+            <div class="name flex">
+              <i class="ri-arrow-down-fill"></i>
+              <p>pressure /mb</p>
+            </div>
+            <div class="v pressure-mb-val">1009.0</div>
+          </div>
+
+          <div class="sp pressure-in">
+            <div class="name flex">
+              <i class="ri-arrow-down-fill"></i>
+              <p>pressure /in</p>
+            </div>
+
+            <div class="v pressure-in-val">29.8</div>
+          </div>
+
+          <div class="sp precip-mm">
+            <div class="name flex">
+              <i class="ri-bar-chart-box-line"></i>
+              <p>precip /mm</p>
+            </div>
+
+            <div class="v precip-mm-val">0.0</div>
+          </div>
+
+          <div class="sp uv">
+            <div class="name flex">
+              <i class="ri-lightbulb-line"></i>
+              <p>uv</p>
+            </div>
+            <div class="v uv-val">1.0</div>
+          </div>
+
+          <div class="sp gust-mph">
+            <div class="name flex">
+              <i class="ri-cloud-windy-line"></i>
+              <p>gust /mph</p>
+            </div>
+            <div class="v gust-mph-val">12.1</div>
+          </div>
+
+          <div class="sp gust-kph">
+            <div class="name flex">
+              <i class="ri-cloud-windy-line"></i>
+              <p>gust /kph</p>
+            </div>
+
+            <div class="v gust-kph-val">19.4</div>
+          </div>
+
+          <div class="sp vis-km">
+            <div class="name flex">
+              <i class="ri-eye-off-line"></i>
+              <p>vis /km</p>
+            </div>
+            <div class="v vis-kmb-val">10.0</div>
+          </div>
+
+          <div class="sp vis-miles">
+            <div class="name flex">
+              <i class="ri-eye-off-line"></i>
+              <p>vis /miles</p>
+            </div>
+
+            <div class="v vis-miles-val">6.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="background-wrap">
+      <div class="x1">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x2">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x3">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x4">
+        <div class="cloud"></div>
+      </div>
+
+      <div class="x5">
+        <div class="cloud"></div>
+      </div>
+    </div>
+
+
+  </body>
+  <footer>
+    <p>made by snndmnsz with ❤</p>
+  </footer>
+</html>
