@@ -122,7 +122,10 @@ button.addEventListener("click", function () {
 const getDataFindLocation = async function (lat, long) {
   
   const data = await fetch(
-    ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`
+    ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`,
+    {
+      mode: "no-cors",
+    }
   );
 
   if (data.status === 400) {
@@ -197,7 +200,10 @@ input.addEventListener("keyup", function (event) {
 const getDataFromInput = async function (input) {
   
   const data = await fetch(
-    ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${input}`
+    ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${input}`,
+    {
+      mode: "no-cors",
+    }
   );
 
   if (data.status === 400) {
