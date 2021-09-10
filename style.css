@@ -428,9 +428,7 @@ i {
   .stats .page-2 {
     width: 80%;
   }
-  footer {
-    display: none;
-  }
+  
 }
 
 #background-wrap {
@@ -673,7 +671,7 @@ i {
 }
 
 /*       */
-footer {
+.footer {
   position: absolute;
   bottom: 25px;
   font-size: 12px;
