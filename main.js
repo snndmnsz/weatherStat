@@ -183,6 +183,7 @@ const input = document.querySelector("#input");
 input.addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
+    $("#input").blur();
     error.style.display = "none";
     loader.style.display = "inline";
 
