@@ -74,7 +74,7 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 45px;
+  gap: 20px;
 }
 .right .source-code {
   display: flex;
@@ -86,13 +86,40 @@ i {
   color: var(--text-font-color);
   border: 1px solid transparent;
   border-radius: 8px;
-  width: 156px;
-  height: 50px;
-  font-weight: 600;
-  font-size: 15px;
+  width: 145px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 13px;
   cursor: pointer;
   -webkit-box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
+}
+.right .source-code i{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.right .chrome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--text-font-color);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 185px;
+  height: 45px;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
+}
+.right .chrome i{
+  font-size: 25px;
+  font-weight: 500;
 }
 .lang {
   display: flex;
@@ -195,8 +222,8 @@ i {
   border-radius: 8px;
   gap: 10px;
   font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 400;
+  font-size: 14px;
   -webkit-box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 15px 25px -15px rgba(0, 0, 0, 0.1);
 }
@@ -446,9 +473,9 @@ i {
 /* ANIMATIONS */
 
 .x1 {
-  -webkit-animation: animateCloud 60s linear infinite;
-  -moz-animation: animateCloud 60s linear infinite;
-  animation: animateCloud 60s linear infinite;
+  -webkit-animation: animateCloud 70s linear infinite;
+  -moz-animation: animateCloud 70s linear infinite;
+  animation: animateCloud 70s linear infinite;
 
   -webkit-transform: scale(0.65);
   -moz-transform: scale(0.65);
@@ -456,9 +483,9 @@ i {
 }
 
 .x2 {
-  -webkit-animation: animateCloud 80s linear infinite;
-  -moz-animation: animateCloud 80s linear infinite;
-  animation: animateCloud 80s linear infinite;
+  -webkit-animation: animateCloud 90s linear infinite;
+  -moz-animation: animateCloud 90s linear infinite;
+  animation: animateCloud 90s linear infinite;
 
   -webkit-transform: scale(0.3);
   -moz-transform: scale(0.3);
@@ -466,9 +493,9 @@ i {
 }
 
 .x3 {
-  -webkit-animation: animateCloud 100s linear infinite;
-  -moz-animation: animateCloud 100s linear infinite;
-  animation: animateCloud 100s linear infinite;
+  -webkit-animation: animateCloud 110s linear infinite;
+  -moz-animation: animateCloud 110s linear infinite;
+  animation: animateCloud 110s linear infinite;
 
   -webkit-transform: scale(0.5);
   -moz-transform: scale(0.5);
@@ -476,9 +503,9 @@ i {
 }
 
 .x4 {
-  -webkit-animation: animateCloud 120s linear infinite;
-  -moz-animation: animateCloud 120s linear infinite;
-  animation: animateCloud 120s linear infinite;
+  -webkit-animation: animateCloud 140s linear infinite;
+  -moz-animation: animateCloud 140s linear infinite;
+  animation: animateCloud 140s linear infinite;
 
   -webkit-transform: scale(0.4);
   -moz-transform: scale(0.4);
