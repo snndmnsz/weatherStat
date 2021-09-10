@@ -11,14 +11,16 @@
       rel="stylesheet"
     />
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet" />
-    <script src="main.js"></script>
-    <title>weatherStats</title>
+    <script defer src="main.js"></script>
+    <title>weatherStat BETA</title>
   </head>
   <body>
     <div class="header">
       <div class="logo flex">
         <p>WeatherStat</p>
-        <i class="ri-moon-cloudy-line"></i>
+        <!-- <i class="ri-moon-cloudy-line"></i> -->
+        <img style="height: 40px;" src="icon.png" alt="">
+        <h6 style="margin-left: 5px; color:gray; " >BETA</h6>
       </div>
       <div class="right">
         <div class="source-code button">
@@ -51,7 +53,7 @@
             <i class="ri-search-line"></i>
           </div>
           <div class="search-input flex">
-            <input type="text" placeholder="write a city name and hit enter...." />
+            <input id="input"  type="text" placeholder="write a city name and hit enter...." />
           </div>
         </div>
         <div class="find-location flex button">
@@ -63,29 +65,25 @@
       <div class="stats">
         <div class="stat main">
           <div class="icon">
-            <img src="116.png" alt="" />
+            <img class="wicon" src="116.png" alt="" />
           </div>
-          <div class="condition">Partly cloudy</div>
+          <p class="condition">Partly cloudy</p>
           <div class="temp-c-main flex">
-            <div class="temp-c">19.0</div>
+            <p class="temp-c">19.0</p>
             <i class="ri-celsius-line"></i>
           </div>
           <div class="temp-f-main flex">
-            <div class="temp-f">66.2</div>
+            <p class="temp-f">66.2</p>
             <i class="ri-fahrenheit-line"></i>
           </div>
-          <div class="name">London</div>
+          <p class="name">London</p>
           <div class="country-flag flex">
-            <i
-              class="em em-gb"
-              aria-role="presentation"
-              aria-label="United Kingdom Flag"
-            ></i>
-            <div class="country">United Kingdom</div>
+            <img class="flag" src="https://restcountries.eu/data/tur.svg" alt="">
+            <p class="country">United Kingdom</p>
           </div>
           <div class="last-updated flex">
             <p>last updated</p>
-            <div class="update-date">2021-09-09 23:02</div>
+            <p class="update-date">2021-09-09 23:02</p>
           </div>
         </div>
 
@@ -95,7 +93,7 @@
               <i class="ri-windy-line"></i>
               <p>wind /mph</p>
             </div>
-            <div class="v wind-mhp-val">5.6</div>
+            <p class="v wind-mhp-val">5.6</p>
           </div>
 
           <div class="sp wind-kph">
@@ -103,7 +101,7 @@
               <i class="ri-windy-line"></i>
               <p>wind /kph</p>
             </div>
-            <div class="v wind-kph-val">9.0</div>
+            <p class="v wind-kph-val">9.0</p>
           </div>
 
           <div class="sp wind-degree">
@@ -111,7 +109,7 @@
               <i class="ri-windy-line"></i>
               <p>wind /c°</p>
             </div>
-            <div class="v wind-degree-val">210</div>
+            <p class="v wind-degree-val">210</p>
           </div>
 
           <div class="sp wind-dir">
@@ -119,14 +117,14 @@
               <i class="ri-windy-line"></i>
               <p>wind dir.</p>
             </div>
-            <div class="v wind-dir-val">SSW</div>
+            <p class="v wind-dir-val">SSW</p>
           </div>
           <div class="sp humidity">
             <div class="name flex">
               <i class="ri-contrast-drop-2-line"></i>
               <p>humidity</p>
             </div>
-            <div class="v humidity-val">78</div>
+            <p class="v humidity-val">78</p>
           </div>
 
           <div class="sp clouds">
@@ -135,7 +133,7 @@
               <p>cloud</p>
             </div>
 
-            <div class="v cloud-val">0</div>
+            <p class="v cloud-val">0</p>
           </div>
 
           <div class="sp feelslike-c">
@@ -144,7 +142,7 @@
               <p>feelslike /c°</p>
             </div>
 
-            <div class="v feelslike-c-val">19.0</div>
+            <p class="v feelslike-c-val">19.0</p>
           </div>
 
           <div class="sp feelslike-f">
@@ -153,7 +151,7 @@
               <p>feelslike /f</p>
             </div>
 
-            <div class="v feelslike-f-val">66.2</div>
+            <p class="v feelslike-f-val">66.2</p>
           </div>
         </div>
 
@@ -254,6 +252,6 @@
 
   </body>
   <footer>
-    <p>made by snndmnsz with ❤</p>
+    <p>made by snndmnsz with 🍌</p>
   </footer>
 </html>

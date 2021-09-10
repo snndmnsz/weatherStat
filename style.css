@@ -28,6 +28,7 @@ body {
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
+  color: var(--text-font-color);
 }
 
 i {
@@ -220,6 +221,11 @@ box-shadow: 0px 15px 25px -15px rgba(0,0,0,0.1);
    
 }
 
+.country-flag .flag{
+  height: 20px;
+  border-radius: 5px;
+}
+
 .stats .main .condition {
     font-weight: 500;
     font-size: 25px;
@@ -255,7 +261,7 @@ box-shadow: 0px 15px 25px -15px rgba(0,0,0,0.1);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     width: 30%;
 }
 
@@ -264,7 +270,7 @@ box-shadow: 0px 15px 25px -15px rgba(0,0,0,0.1);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px;
+    gap: 15px;
     width: 30%;
 }
 
@@ -273,17 +279,16 @@ box-shadow: 0px 15px 25px -15px rgba(0,0,0,0.1);
 .stat .sp {
    
     display: flex;
+    font-size: 15px;
+    font-weight: 400;
     width: 85%;
     flex-direction: row;
     justify-content: space-between;
-    
     align-items: center;
-
 }    
 .stat .sp .v{
     font-weight: bold;
 }
-
 
 
 .button {
