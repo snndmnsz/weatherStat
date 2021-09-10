@@ -36,6 +36,11 @@ hide_main.style.display = "none";
 hide_1.style.display = "none";
 hide_2.style.display = "none";
 
+const error = document.querySelector(".error");
+error.style.display = "none";
+
+const error_message = document.querySelector(".error-message");
+
 const getCardData = (
   card_icon,
   card_condition,
@@ -95,6 +100,7 @@ const button = document.querySelector(".find-location");
 
 button.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(function (position) {
+    error.style.display = "none";
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
 
@@ -114,15 +120,26 @@ button.addEventListener("click", function () {
 });
 
 const getDataFindLocation = async function (lat, long) {
+  
   const data = await fetch(
     ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${lat},${long}`
   );
+
+  if (data.status === 400) {
+    loader.style.display = "none";
+    error_message.innerHTML = "Your Location";
+    error.style.display = "flex";
+    setTimeout(() => {
+      error.style.display = "none";
+    }, 2000);
+    return;
+  }
+
   const { location, current } = await data.json();
   //console.log(location);
   //console.log(current);
 
   const flag = await getFlag(location.country);
-  console.log(flag);
 
   getCardData(
     current.condition.icon,
@@ -161,12 +178,13 @@ const input = document.querySelector("#input");
 input.addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
+    error.style.display = "none";
     loader.style.display = "inline";
 
     setTimeout(() => {
       loader.style.display = "none";
       getDataFromInput(input.value);
-      input.value = "";
+      //input.value = "";
 
       loader.style.display = "none";
     }, 1000);
@@ -177,9 +195,21 @@ input.addEventListener("keyup", function (event) {
 });
 
 const getDataFromInput = async function (input) {
+  
   const data = await fetch(
     ` http://api.weatherapi.com/v1/current.json?key=822ac31193f34e5ca05101434210909&q=${input}`
   );
+
+  if (data.status === 400) {
+    loader.style.display = "none";
+    error_message.innerHTML = input;
+    error.style.display = "flex";
+    setTimeout(() => {
+      error.style.display = "none";
+    }, 2000);
+    return;
+  }
+
   const { location, current } = await data.json();
   //console.log(location);
   //console.log(current);
