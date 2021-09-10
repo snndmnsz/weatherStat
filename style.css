@@ -12,7 +12,7 @@
   --primary-color: #16171b;
   --secondary-color: #212528;
   --text-color: #a4a6a7;
-  --main-text-color: #B5C0FF;
+  --main-text-color: #ccd1f0;
   --text-font-color: #edeeee;
   --logo-color: #edeeee;
   --cloud-color: #9bb4bb;
@@ -366,6 +366,10 @@ i {
 @media screen and (min-width: 1400px) {
   .stats {
     margin-top: 50px;
+    
+  }
+  .container .search-text {
+    margin-bottom: 20px;
   }
 }
 
