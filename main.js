@@ -144,7 +144,7 @@ const getDataFindLocation = async function (lat, long) {
   //console.log(location);
   //console.log(current);
 
-  const flag = await getFlag(location.country);
+  //const flag = await getFlag(location.country);
 
   getCardData(
     current.condition.icon,
@@ -221,8 +221,8 @@ const getDataFromInput = async function (input) {
   //console.log(location);
   //console.log(current);
 
-  const flag = await getFlag(location.country);
-  console.log(flag);
+  //const flag = await getFlag(location.country);
+  //console.log(flag);
 
   getCardData(
     current.condition.icon,
@@ -257,7 +257,7 @@ const getDataFromInput = async function (input) {
 };
 
 const getFlag = async function (name) {
-  const data = await fetch(` https://restcountries.eu/rest/v2/name/${name}`);
+  const data = await fetch(`https://restcountries.eu/rest/v2/name/${name}`);
   const [allData] = await data.json();
   return allData.flag;
 };
